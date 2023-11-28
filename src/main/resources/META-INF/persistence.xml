@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="TrabajoIntegrador" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>ar.com.jg.model.Cliente</class>
+        <class>ar.com.jg.model.DatosContacto</class>
+        <class>ar.com.jg.model.Especialidad</class>
+        <class>ar.com.jg.model.OperadorMesaAyuda</class>
+        <class>ar.com.jg.model.ReporteIncidencia</class>
+        <class>ar.com.jg.model.Servicio</class>
+        <class>ar.com.jg.model.Tecnico</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/trabajo_integrador?useSSL=false&amp;serverTimezone=America/Argentina/Cordoba"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="@270Jorge571"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>  <!---drop-and-create/create/drop/none-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <!---<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+           <property name="hibernate.c3p0.min_size" value="0"/>
+           <property name="hibernate.c3p0.max_size" value="7"/>
+           <property name="hibernate.c3p0.timeout" value="100"/>
+           <property name="hibernate.c3p0.idle_test_period" value="100"/>
+       </properties>
+   </persistence-unit>
+</persistence>
